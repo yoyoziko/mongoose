@@ -35,13 +35,10 @@ exports.index = function (req, res, next) {
 
   var username =  req.body.username;
   var password =  req.body.password;
-  var flag;
-  fs.readFile('./flag', function (err, data) {
-    if (err) {
-      throw err;
-    }
-    flag=data;
-  });
+  var flag2 = fs.readFileSync('./flag', 'utf-8').trim();
+  let buff = new Buffer.from(flag2, 'base64');
+  let text = buff.toString('ascii');
+  let flag=text;
 
   User.find({ username: username, password: password  }, function (err, users) {
     if (users.length > 0) {

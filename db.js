@@ -12,9 +12,9 @@ mongoose.model('User', User);
 // Default Mongo URI is local
 const DOCKER = process.env.DOCKER
 if ( DOCKER === '1') {
-  var mongoUri = 'mongodb://goof-mongo/express-todo';
+  var mongoUri = 'mongodb://localhost:27017';
 } else {
-  var mongoUri = 'mongodb://localhost/express-todo';
+  var mongoUri = 'mongodb://localhost:27017';
 }
 
 
