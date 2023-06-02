@@ -41,6 +41,7 @@ exports.index = function (req, res, next) {
   let flag=text;
 
   User.find({ username: username, password: password  }, function (err, users) {
+
     if (users.length > 0) {
       return res.render('index', {
         title: 'Admin Access Granted',
@@ -53,6 +54,7 @@ exports.index = function (req, res, next) {
         granted: false,
       });
     }
+  
   });
 
 };
