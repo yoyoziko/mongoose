@@ -19,7 +19,7 @@
     "express": "4.12.4",
     "jquery": "^2.2.4",
     "method-override": "latest",
-    "mongodb": "^3.0.0",
+    "mongodb": "^3.7.3",
     "mongoose": "^5.7.0",
     "morgan": "latest",
     "npmconf": "0.0.24",
